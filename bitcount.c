@@ -4,7 +4,6 @@ int bitcount(unsigned x)
     int counter = 0;
     while(x)
     {
-        printf("-- %d\n", x);
         counter++;
         x &= x-1;
     }
@@ -14,10 +13,7 @@ int bitcount(unsigned x)
 main()
 {
     int input,i;
-    for(i = 0 ; i < 10; i++)
-    {
-        scanf("%d", &input);
-        int output = bitcount(input);
-        printf("result %d\n", output);
-    }
+    scanf("%d", &input);
+    int output = bitcount(input);
+    printf("result %d\n", output);
 }
